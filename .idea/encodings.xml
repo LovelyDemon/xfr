@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="UTF-8">
+    <file url="file://$PROJECT_DIR$/src/com/change/CompanionAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/CompanionService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/CompanionServiceImpl.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/HotelAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/HotelDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/HotelService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/HotelfAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/LxglAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/LxglDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/LxglService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/NewsAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/NewsDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/NewsService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/NewsfAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/OrderAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/OrderDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/OrderService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/ProductfAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/RecAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/RecDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/RecService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/RecfAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/ScenicAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/ScenicDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/ScenicService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/ScenicfAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/UadminAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/UadminDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/UadminService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/UmsgAction.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/UmsgDao.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/change/UmsgService.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/util/DBUtil.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/util/DividePage.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/util/JdbcUtils.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/util/UUIDTools.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/util/contactServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/util/demo.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/util/loginServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/util/lx_hfServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/util/lx_singleServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/util/orderServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/com/util/registerServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/my/jianjieServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/my/news_addServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/my/personalServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/my/pro_addServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/my/rec_addServlet.java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/my/scenic_addServlet.java" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
+  </component>
+</project>
