@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
-         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
-         version="3.1">
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         id="WebApp_ID" version="3.0">
     <servlet>
         <servlet-name>LoginServlet</servlet-name>
         <servlet-class>com.util.loginServlet</servlet-class>
@@ -117,15 +116,19 @@
     </servlet-mapping>
 
     <servlet>
-        <servlet-name>CompanionAction</servlet-name>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
+        <servlet-name>ProductAction</servlet-name>
         <servlet-class>com.change.CompanionAction</servlet-class>
     </servlet>
     <servlet-mapping>
-        <servlet-name>CompanionAction</servlet-name>
-        <url-pattern>/admin/CompanionAction</url-pattern>
+        <servlet-name>ProductAction</servlet-name>
+        <url-pattern>/admin/ProductAction</url-pattern>
     </servlet-mapping>
 
     <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
         <servlet-name>OrderAction</servlet-name>
         <servlet-class>com.change.OrderAction</servlet-class>
     </servlet>
@@ -135,8 +138,9 @@
     </servlet-mapping>
 
 
-
     <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
         <servlet-name>NewsAction</servlet-name>
         <servlet-class>com.change.NewsAction</servlet-class>
     </servlet>
@@ -146,6 +150,8 @@
     </servlet-mapping>
 
     <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
         <servlet-name>ScenicAction</servlet-name>
         <servlet-class>com.change.ScenicAction</servlet-class>
     </servlet>
@@ -155,6 +161,8 @@
     </servlet-mapping>
 
     <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
         <servlet-name>RecAction</servlet-name>
         <servlet-class>com.change.RecAction</servlet-class>
     </servlet>
@@ -164,6 +172,8 @@
     </servlet-mapping>
 
     <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
         <servlet-name>HotelAction</servlet-name>
         <servlet-class>com.change.HotelAction</servlet-class>
     </servlet>
@@ -173,6 +183,8 @@
     </servlet-mapping>
 
     <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
         <servlet-name>RecfAction</servlet-name>
         <servlet-class>com.change.RecfAction</servlet-class>
     </servlet>
@@ -182,6 +194,8 @@
     </servlet-mapping>
 
     <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
         <servlet-name>UadminAction</servlet-name>
         <servlet-class>com.change.UadminAction</servlet-class>
     </servlet>
@@ -191,6 +205,8 @@
     </servlet-mapping>
 
     <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
         <servlet-name>UmsgAction</servlet-name>
         <servlet-class>com.change.UmsgAction</servlet-class>
     </servlet>
@@ -200,6 +216,8 @@
     </servlet-mapping>
 
     <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
         <servlet-name>NewsfAction</servlet-name>
         <servlet-class>com.change.NewsfAction</servlet-class>
     </servlet>
@@ -209,6 +227,8 @@
     </servlet-mapping>
 
     <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
         <servlet-name>HotelfAction</servlet-name>
         <servlet-class>com.change.HotelfAction</servlet-class>
     </servlet>
@@ -219,6 +239,8 @@
 
 
     <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
         <servlet-name>ProductfAction</servlet-name>
         <servlet-class>com.change.ProductfAction</servlet-class>
     </servlet>
@@ -229,6 +251,8 @@
 
 
     <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
         <servlet-name>ScenicfAction</servlet-name>
         <servlet-class>com.change.ScenicfAction</servlet-class>
     </servlet>
@@ -238,6 +262,8 @@
     </servlet-mapping>
 
     <servlet>
+        <description>This is the description of my J2EE component</description>
+        <display-name>This is the display name of my J2EE component</display-name>
         <servlet-name>LxglAction</servlet-name>
         <servlet-class>com.change.LxglAction</servlet-class>
     </servlet>
@@ -246,23 +272,4 @@
         <url-pattern>/admin/LxglAction</url-pattern>
     </servlet-mapping>
 
-    <servlet>
-        <servlet-name>addCompanionServlet</servlet-name>
-        <servlet-class>com.util.AddCompanionServlet</servlet-class>
-    </servlet>
-    <servlet-mapping>
-        <servlet-name>addCompanionServlet</servlet-name>
-        <url-pattern>/admin/addCompanion</url-pattern>
-    </servlet-mapping>
-
-    <servlet>
-
-        <servlet-name>UploadServlet</servlet-name>
-        <servlet-class>com.util.UploadServlet</servlet-class>
-    </servlet>
-
-    <servlet-mapping>
-        <servlet-name>UploadServlet</servlet-name>
-        <url-pattern>/upload</url-pattern>
-    </servlet-mapping>
-</web-app>
+</web-app> 
