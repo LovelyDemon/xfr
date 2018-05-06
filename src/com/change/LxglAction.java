@@ -1,26 +1,15 @@
 package com.change;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import com.util.DividePage;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.disk.DiskFileItemFactory;
-import org.apache.commons.fileupload.servlet.ServletFileUpload;
-
-
-
-import com.util.DividePage;
-import com.util.UUIDTools;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+import java.util.Map;
 
 public class LxglAction extends HttpServlet {
 
@@ -81,13 +70,13 @@ public class LxglAction extends HttpServlet {
 		System.out.print("dell!");
 		System.out.print(action_flag);
 		if (action_flag.equals("search")) {
-			listLxgl(request,response);
-		}else if (action_flag.equals("del")) {
+			listLxgl(request, response);
+		} else if (action_flag.equals("del")) {
 			System.out.print("dell!");
-			
-			delLxgl(request,response);
-		}else if (action_flag.equals("view")) {
-			viewLxgl(request,response);
+
+			delLxgl(request, response);
+		} else if (action_flag.equals("view")) {
+			viewLxgl(request, response);
 		}
 		
 		
@@ -112,9 +101,6 @@ public class LxglAction extends HttpServlet {
 		} 
 		
 	}
-	
-	
-
 
 	/**批量删除产品
 	 * @param request
@@ -145,8 +131,6 @@ public class LxglAction extends HttpServlet {
 
 	private void listLxgl(HttpServletRequest request,
 			HttpServletResponse response) {
-		// TODO Auto-generated method stub
-		
 		String userName = request.getParameter("uname");	
 		String pageNum = request.getParameter("pageNum");
 		System.out.println("参数 pageNum :"+pageNum);

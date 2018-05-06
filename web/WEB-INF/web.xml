@@ -252,7 +252,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>addCompanionServlet</servlet-name>
-        <url-pattern>/addCompanion</url-pattern>
+        <url-pattern>/admin/addCompanion</url-pattern>
     </servlet-mapping>
 
     <servlet>

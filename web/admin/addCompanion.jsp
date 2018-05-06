@@ -80,18 +80,8 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <div class="layui-form-item">
                             <label class="layui-form-label" style="width: 100px">人数限制</label>
                             <div class="layui-inline">
-                                <label class="layui-form-label" style="width: auto"><i class="layui-icon"
-                                                                                       style="font-size: 20px;">&#xe662;</i></label>
                                 <div class="layui-input-inline" style="width: auto">
-                                    <input type="text" name="maleNum" lay-verify="maleNum" autocomplete="off"
-                                           class="layui-input" style="width: 50px">
-                                </div>
-                            </div>
-                            <div class="layui-inline">
-                                <label class="layui-form-label" style="width: auto"><i class="layui-icon"
-                                                                                       style="font-size: 20px;">&#xe661;</i></label>
-                                <div class="layui-input-inline" style="width: auto">
-                                    <input type="text" name="femaleNum" lay-verify="femaleNum" autocomplete="off"
+                                    <input type="text" name="limitNum" lay-verify="limitNum" autocomplete="off"
                                            class="layui-input" style="width: 50px">
                                 </div>
                             </div>

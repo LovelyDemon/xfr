@@ -8,7 +8,6 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-    <title>登录</title>
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="js/jquery.min.js"></script>
@@ -57,7 +56,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     boolean ifadmin = db.ifadmin(a);
                     if (ifadmin) {
                 %>
-                <li><a href="admin/jianjie.jsp"><i class="glyphicon glyphicon-user"> </i>去后台</a></li>
+                <li><a href="admin/uadmin_main.jsp"><i class="glyphicon glyphicon-user"> </i>去后台</a></li>
                 <%} else {%>
                 <li><a href="admin/UmsgAction?action_flag=hf_search&pageNum=1"><i class="glyphicon glyphicon-user"> </i>去后台</a>
                 </li>

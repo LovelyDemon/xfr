@@ -27,37 +27,54 @@
                 <div class="tab-pane active" id="horizontal-form">
                     <form class="form-horizontal" action="pro_add" method=post enctype="multipart/form-data">
                         <div class="form-group">
-                            <label for="focusedinput" class="col-sm-2 control-label"><b>产品名称</b></label>
-                            <div class="col-sm-8"><input type="text" class="form-control1" id="prname" name="prname"
-                                                         value=<%=map.get("prname") %> readonly></div>
+                            <label for="focusedinput" class="col-sm-2 control-label"><b>标题</b></label>
+                            <div class="col-sm-8"><input type="text" class="form-control1" id="title" name="title"
+                                                         value=<%=map.get("title") %> readonly></div>
                         </div>
                         <br>
                         <div class="form-group">
-                            <label for="focusedinput" class="col-sm-2 control-label"><b>产品价格</b></label>
-                            <div class="col-sm-8">
-                                <input type="text" class="form-control1" id="prprice" name="prprice"
-                                                         value=<%=map.get("prprice") %>>
+                            <label for="focusedinput" class="col-sm-2 control-label"><b>出发时间</b></label>
+                            <div class="col-sm-8" style="width: 250px">
+                                <input type="text" class="form-control1" id="startDate" name="startDate"
+                                                         value=<%=map.get("start_date") %> readonly>
+                            </div>
+                            <label for="focusedinput" class="col-sm-2 control-label"><b>结束时间</b></label>
+                            <div class="col-sm-8" style="width: 250px">
+                                <input type="text" class="form-control1" id="endDate" name="endDate"
+                                       value=<%=map.get("end_date") %> readonly>
                             </div>
                         </div>
                         <br>
                         <div class="form-group">
-                            <label for="focusedinput" class="col-sm-2 control-label"><b>产品介绍</b></label>
-                            <div class="col-sm-8"><textarea name="prjs" id="prjs" value=cols="50" rows="4"
+                            <label for="focusedinput" class="col-sm-2 control-label"><b>旅行地</b></label>
+                            <div class="col-sm-8"><input type="text" class="form-control1" id="location" name="location"
+                                                         value=<%=map.get("location") %> readonly></div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="focusedinput" class="col-sm-2 control-label"><b>人数限制</b></label>
+                            <div class="col-sm-8"><input type="text" class="form-control1" id="limitNum" name="limitNum"
+                                                         value=<%=map.get("limit_num") %> readonly></div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="focusedinput" class="col-sm-2 control-label"><b>联系方式</b></label>
+                            <div class="col-sm-8"><input type="text" class="form-control1" id="phone" name="phone"
+                                                         value=<%=map.get("phone") %> readonly></div>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="focusedinput" class="col-sm-2 control-label"><b>组队详情</b></label>
+                            <div class="col-sm-8"><textarea name="detail" id="detail" value=cols="50" rows="4"
                                                             class="form-control1"
-                                                            style="height: 125px; width: 683px; "><%=map.get("prjs") %></textarea>
+                                                            style="height: 125px; width: 683px; "><%=map.get("detail") %></textarea>
                             </div>
                         </div>
                         <br>
                         <div class="form-group">
                             <br>
                             <label for="focusedinput" class="col-sm-2 control-label"><b>图片</b></label>
-                            &nbsp&nbsp
-                            <input type="file" id="prpic" name="prpic" style="width: 503px; "><br>
-                        </div>
-                        <div class="form-group" style="height: 99px; ">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-                            <button type="submit" class="btn btn-primary">提交</button>
-                            &nbsp&nbsp
-                            <button type="reset" class="btn btn-default">重置</button>
+                            <img src="../images/1-1.jpg">
                         </div>
                     </form>
                     <div class="panel-footer">

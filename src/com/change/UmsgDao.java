@@ -361,8 +361,6 @@ public class UmsgDao implements UmsgService {
 				}
 				flag = jdbcUtils.deleteByBatch(sql);	
 			}
-					
-			
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();

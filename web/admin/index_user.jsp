@@ -72,9 +72,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                 <li>
                                     <a href="umsg_nepl.jsp">新闻评论</a>
                                 </li>
-                                 <li>
-                                    <a href="umsg_pl.jsp">商品评论</a>
-                                </li>
                                 <li>
                                     <a href="umsg_repl.jsp">推荐评论</a>
                                 </li>

@@ -65,9 +65,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="sidebar-nav navbar-collapse">
                 <ul class="nav" id="side-menu">
                     <li>
-                        <a href="jianjie.jsp"><i class="fa fa-dashboard fa-fw nav_icon"></i>首页管理</a>
-                    </li>
-                    <li>
                         <a href="#"><i class="fa fa-laptop nav_icon"></i>新闻管理<span class="fa arrow"></span></a>
                         <ul class="nav nav-second-level">
                             <li>

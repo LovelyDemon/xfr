@@ -19,21 +19,16 @@ public class AddCompanionServlet extends HttpServlet {
         String startDate = request.getParameter("startDate");
         String endDate = request.getParameter("endDate");
         String location = request.getParameter("location");
-        String maleNumStr = request.getParameter("maleNum");
-        Integer maleNum = null;
-        if (null != maleNumStr && !"".equals(maleNumStr)) {
-            maleNum = Integer.parseInt(maleNumStr);
-        }
-        String femaleNumStr = request.getParameter("femaleNum");
-        Integer femaleNum = null;
-        if (null != femaleNumStr && !"".equals(femaleNumStr)) {
-            femaleNum = Integer.parseInt(femaleNumStr);
+        String limitNumStr = request.getParameter("limitNum");
+        Integer limitNum = null;
+        if (null != limitNumStr && !"".equals(limitNumStr)) {
+            limitNum = Integer.parseInt(limitNumStr);
         }
         String phone = request.getParameter("phone");
         String detail = request.getParameter("getDetail");
 
         DBUtil db = new DBUtil();
-        boolean success = db.addCompanion(title, startDate, endDate, location, maleNum, femaleNum, phone, detail);
+        boolean success = db.addCompanion(title, startDate, endDate, location, limitNum, phone, detail);
         if (success) {
             String script = "<script> alert('添加成功');location.href='index.jsp'</script>";
             response.setContentType("text/html;charset=UTF-8");

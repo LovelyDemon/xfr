@@ -75,7 +75,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     boolean ifadmin = db.ifadmin(a);
                     if (ifadmin) {
                 %>
-                <li><a href="admin/jianjie.jsp"><i class="glyphicon glyphicon-user"> </i>去后台</a></li>
+                <li><a href="admin/uadmin_main.jsp"><i class="glyphicon glyphicon-user"> </i>去后台</a></li>
                 <%} else {%>
                 <li><a href="admin/UmsgAction?action_flag=hf_search&pageNum=1"><i class="glyphicon glyphicon-user"> </i>去后台</a>
                 </li>
@@ -148,128 +148,128 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
 
 <!--news-->
-<div class="container">
-    <div class="content-events">
-        <%
-            news_add n1 = new news_add();
-            DBUtil db1 = new DBUtil();//构建数据库对象
-            int nn1 = 1;
-            db.tiqunews(n1, nn1);
-            String nesavetime1 = n1.getnesavetime();//取得时间
-            nesavetime1 = nesavetime1.substring(0, 10);
-            String nename1 = n1.getnename();//取得新闻标题
-            String nezy1 = n1.getnezy();//取得新闻摘要
-            int neid1 = n1.getneid();//取得新闻摘要
-        %>
-        <h3> 旅游新闻</h3>
-        <div class="news">
-            <div class="col-md-4 new-more">
-                <div class="event">
-                    <h4><%out.print(nesavetime1); %></h4>
-                    <h6><a href="NewsfAction?action_flag=view&neid='neid1'"><%out.print(nename1); %></a></h6>
-                </div>
+<%--<div class="container">--%>
+    <%--<div class="content-events">--%>
+        <%--<%--%>
+            <%--news_add n1 = new news_add();--%>
+            <%--DBUtil db1 = new DBUtil();//构建数据库对象--%>
+            <%--int nn1 = 1;--%>
+            <%--db.tiqunews(n1, nn1);--%>
+            <%--String nesavetime1 = n1.getnesavetime();//取得时间--%>
+            <%--nesavetime1 = nesavetime1.substring(0, 10);--%>
+            <%--String nename1 = n1.getnename();//取得新闻标题--%>
+            <%--String nezy1 = n1.getnezy();//取得新闻摘要--%>
+            <%--int neid1 = n1.getneid();//取得新闻摘要--%>
+        <%--%>--%>
+        <%--<h3> 旅游新闻</h3>--%>
+        <%--<div class="news">--%>
+            <%--<div class="col-md-4 new-more">--%>
+                <%--<div class="event">--%>
+                    <%--<h4><%out.print(nesavetime1); %></h4>--%>
+                    <%--<h6><a href="NewsfAction?action_flag=view&neid='neid1'"><%out.print(nename1); %></a></h6>--%>
+                <%--</div>--%>
 
-                <a class="hvr-sweep-to-right more" href="NewsfAction?action_flag=view&neid=1">详细</a>
-            </div>
-            <div class="col-md-4 new-more">
-                <div class="event">
-                    <%
-                        news_add n2 = new news_add();
-                        DBUtil db2 = new DBUtil();//构建数据库对象
-                        int nn2 = 2;
-                        db.tiqunews(n2, nn2);
-                        String nesavetime2 = n2.getnesavetime();//取得时间
-                        nesavetime2 = nesavetime2.substring(0, 10);
-                        String nename2 = n2.getnename();//取得新闻标题
-                        String nezy2 = n2.getnezy();//取得新闻摘要
-                        int neid2 = n2.getneid();//取得新闻摘要
-                    %>
-                    <h4><%out.print(nesavetime2); %></h4>
-                    <h6><a href="NewsfAction?action_flag=view&neid='neid2'"><%out.print(nename2); %></a></h6>
-                </div>
-                <a class="hvr-sweep-to-right more" href="NewsfAction?action_flag=view&neid=2">详细</a>
-            </div>
-            <div class="col-md-4 new-more">
-                <div class="event">
-                    <%
-                        news_add n3 = new news_add();
-                        DBUtil db3 = new DBUtil();//构建数据库对象
-                        int nn3 = 3;
-                        db.tiqunews(n3, nn3);
-                        String nesavetime3 = n3.getnesavetime();//取得时间
-                        nesavetime3 = nesavetime3.substring(0, 10);
-                        String nename3 = n3.getnename();//取得新闻标题
-                        String nezy3 = n3.getnezy();//取得新闻摘要
-                        int neid3 = n3.getneid();//取得新闻摘要
-                    %>
-                    <h4><%out.print(nesavetime3); %></h4>
-                    <h6><a href="NewsfAction?action_flag=view&neid='neid3'"><%out.print(nename3); %></a></h6>
-                </div>
+                <%--<a class="hvr-sweep-to-right more" href="NewsfAction?action_flag=view&neid=1">详细</a>--%>
+            <%--</div>--%>
+            <%--<div class="col-md-4 new-more">--%>
+                <%--<div class="event">--%>
+                    <%--<%--%>
+                        <%--news_add n2 = new news_add();--%>
+                        <%--DBUtil db2 = new DBUtil();//构建数据库对象--%>
+                        <%--int nn2 = 2;--%>
+                        <%--db.tiqunews(n2, nn2);--%>
+                        <%--String nesavetime2 = n2.getnesavetime();//取得时间--%>
+                        <%--nesavetime2 = nesavetime2.substring(0, 10);--%>
+                        <%--String nename2 = n2.getnename();//取得新闻标题--%>
+                        <%--String nezy2 = n2.getnezy();//取得新闻摘要--%>
+                        <%--int neid2 = n2.getneid();//取得新闻摘要--%>
+                    <%--%>--%>
+                    <%--<h4><%out.print(nesavetime2); %></h4>--%>
+                    <%--<h6><a href="NewsfAction?action_flag=view&neid='neid2'"><%out.print(nename2); %></a></h6>--%>
+                <%--</div>--%>
+                <%--<a class="hvr-sweep-to-right more" href="NewsfAction?action_flag=view&neid=2">详细</a>--%>
+            <%--</div>--%>
+            <%--<div class="col-md-4 new-more">--%>
+                <%--<div class="event">--%>
+                    <%--<%--%>
+                        <%--news_add n3 = new news_add();--%>
+                        <%--DBUtil db3 = new DBUtil();//构建数据库对象--%>
+                        <%--int nn3 = 3;--%>
+                        <%--db.tiqunews(n3, nn3);--%>
+                        <%--String nesavetime3 = n3.getnesavetime();//取得时间--%>
+                        <%--nesavetime3 = nesavetime3.substring(0, 10);--%>
+                        <%--String nename3 = n3.getnename();//取得新闻标题--%>
+                        <%--String nezy3 = n3.getnezy();//取得新闻摘要--%>
+                        <%--int neid3 = n3.getneid();//取得新闻摘要--%>
+                    <%--%>--%>
+                    <%--<h4><%out.print(nesavetime3); %></h4>--%>
+                    <%--<h6><a href="NewsfAction?action_flag=view&neid='neid3'"><%out.print(nename3); %></a></h6>--%>
+                <%--</div>--%>
 
-                <a class="hvr-sweep-to-right more" href="NewsfAction?action_flag=view&neid=3">详细</a>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-        <div class="news">
-            <div class="col-md-4 new-more">
-                <div class="event">
-                    <%
-                        news_add n4 = new news_add();
-                        DBUtil db4 = new DBUtil();//构建数据库对象
-                        int nn4 = 4;
-                        db.tiqunews(n4, nn4);
-                        String nesavetime4 = n4.getnesavetime();//取得时间
-                        nesavetime4 = nesavetime4.substring(0, 10);
-                        String nename4 = n4.getnename();//取得新闻标题
-                        String nezy4 = n4.getnezy();//取得新闻摘要
-                        int neid4 = n4.getneid();//取得新闻摘要
-                    %>
-                    <h4><%out.print(nesavetime1); %></h4>
-                    <h6><a href="NewsfAction?action_flag=view&neid='neid4'"><%out.print(nename4); %></a></h6>
-                </div>
+                <%--<a class="hvr-sweep-to-right more" href="NewsfAction?action_flag=view&neid=3">详细</a>--%>
+            <%--</div>--%>
+            <%--<div class="clearfix"></div>--%>
+        <%--</div>--%>
+        <%--<div class="news">--%>
+            <%--<div class="col-md-4 new-more">--%>
+                <%--<div class="event">--%>
+                    <%--<%--%>
+                        <%--news_add n4 = new news_add();--%>
+                        <%--DBUtil db4 = new DBUtil();//构建数据库对象--%>
+                        <%--int nn4 = 4;--%>
+                        <%--db.tiqunews(n4, nn4);--%>
+                        <%--String nesavetime4 = n4.getnesavetime();//取得时间--%>
+                        <%--nesavetime4 = nesavetime4.substring(0, 10);--%>
+                        <%--String nename4 = n4.getnename();//取得新闻标题--%>
+                        <%--String nezy4 = n4.getnezy();//取得新闻摘要--%>
+                        <%--int neid4 = n4.getneid();//取得新闻摘要--%>
+                    <%--%>--%>
+                    <%--<h4><%out.print(nesavetime1); %></h4>--%>
+                    <%--<h6><a href="NewsfAction?action_flag=view&neid='neid4'"><%out.print(nename4); %></a></h6>--%>
+                <%--</div>--%>
 
-                <a class="hvr-sweep-to-right more" href="NewsfAction?action_flag=view&neid=4">详细</a>
-            </div>
-            <div class="col-md-4 new-more">
-                <div class="event">
-                    <%
-                        news_add n5 = new news_add();
-                        DBUtil db5 = new DBUtil();//构建数据库对象
-                        int nn5 = 5;
-                        db.tiqunews(n5, nn5);
-                        String nesavetime5 = n5.getnesavetime();//取得时间
-                        nesavetime5 = nesavetime5.substring(0, 10);
-                        String nename5 = n5.getnename();//取得新闻标题
-                        String nezy5 = n5.getnezy();//取得新闻摘要
-                        int neid5 = n5.getneid();//取得新闻摘要
-                    %>
-                    <h4><%out.print(nesavetime5); %></h4>
-                    <h6><a href="NewsfAction?action_flag=view&neid='neid5'"><%out.print(nename5); %></a></h6>
-                </div>
-                <a class="hvr-sweep-to-right more" href="NewsfAction?action_flag=view&neid=5">详细</a>
-            </div>
-            <div class="col-md-4 new-more">
-                <div class="event">
-                    <%
-                        news_add n6 = new news_add();
-                        DBUtil db6 = new DBUtil();//构建数据库对象
-                        int nn6 = 6;
-                        db.tiqunews(n6, nn6);
-                        String nesavetime6 = n6.getnesavetime();//取得时间
-                        nesavetime6 = nesavetime6.substring(0, 10);
-                        String nename6 = n6.getnename();//取得新闻标题
-                        String nezy6 = n6.getnezy();//取得新闻摘要
-                        int neid6 = n1.getneid();//取得新闻摘要
-                    %>
-                    <h4><%out.print(nesavetime6); %></h4>
-                    <h6><a href="NewsfAction?action_flag=view&neid='neid6'"><%out.print(nename6); %></a></h6>
-                </div>
-                <a class="hvr-sweep-to-right more" href="NewsfAction?action_flag=view&neid=6">详细</a>
-            </div>
-            <div class="clearfix"></div>
-        </div>
-    </div>
-</div>
+                <%--<a class="hvr-sweep-to-right more" href="NewsfAction?action_flag=view&neid=4">详细</a>--%>
+            <%--</div>--%>
+            <%--<div class="col-md-4 new-more">--%>
+                <%--<div class="event">--%>
+                    <%--<%--%>
+                        <%--news_add n5 = new news_add();--%>
+                        <%--DBUtil db5 = new DBUtil();//构建数据库对象--%>
+                        <%--int nn5 = 5;--%>
+                        <%--db.tiqunews(n5, nn5);--%>
+                        <%--String nesavetime5 = n5.getnesavetime();//取得时间--%>
+                        <%--nesavetime5 = nesavetime5.substring(0, 10);--%>
+                        <%--String nename5 = n5.getnename();//取得新闻标题--%>
+                        <%--String nezy5 = n5.getnezy();//取得新闻摘要--%>
+                        <%--int neid5 = n5.getneid();//取得新闻摘要--%>
+                    <%--%>--%>
+                    <%--<h4><%out.print(nesavetime5); %></h4>--%>
+                    <%--<h6><a href="NewsfAction?action_flag=view&neid='neid5'"><%out.print(nename5); %></a></h6>--%>
+                <%--</div>--%>
+                <%--<a class="hvr-sweep-to-right more" href="NewsfAction?action_flag=view&neid=5">详细</a>--%>
+            <%--</div>--%>
+            <%--<div class="col-md-4 new-more">--%>
+                <%--<div class="event">--%>
+                    <%--<%--%>
+                        <%--news_add n6 = new news_add();--%>
+                        <%--DBUtil db6 = new DBUtil();//构建数据库对象--%>
+                        <%--int nn6 = 6;--%>
+                        <%--db.tiqunews(n6, nn6);--%>
+                        <%--String nesavetime6 = n6.getnesavetime();//取得时间--%>
+                        <%--nesavetime6 = nesavetime6.substring(0, 10);--%>
+                        <%--String nename6 = n6.getnename();//取得新闻标题--%>
+                        <%--String nezy6 = n6.getnezy();//取得新闻摘要--%>
+                        <%--int neid6 = n1.getneid();//取得新闻摘要--%>
+                    <%--%>--%>
+                    <%--<h4><%out.print(nesavetime6); %></h4>--%>
+                    <%--<h6><a href="NewsfAction?action_flag=view&neid='neid6'"><%out.print(nename6); %></a></h6>--%>
+                <%--</div>--%>
+                <%--<a class="hvr-sweep-to-right more" href="NewsfAction?action_flag=view&neid=6">详细</a>--%>
+            <%--</div>--%>
+            <%--<div class="clearfix"></div>--%>
+        <%--</div>--%>
+    <%--</div>--%>
+<%--</div>--%>
 
 <div class="content">
     <div class="project">
@@ -281,8 +281,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
             <div class="services-grid">
                 <div class="col-md-6 service-top1">
                     <div class=" ser-grid">
-                        <%--<a href="#" class="hi-icon hi-icon-archive glyphicon glyphicon-leaf"> </a>--%>
-                        <img src="images/2.jpg" width="80" height="80" alt="">
+                        <a href="#" class="hi-icon hi-icon-archive glyphicon glyphicon-leaf"> </a>
                     </div>
                     <div class="ser-top">
                         <%
@@ -364,93 +363,6 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     <!--features--><!--//features-->
     <!--phone--><!--//phone-->
     <!--project--->
-    <div class="services">
-        <div class="container">
-            <div class="service-top">
-                <h3>酒店</h3>
-
-            </div>
-
-            <div class="project-top">
-                <div class="col-md-3 project-grid">
-                    <div class="project-grid-top">
-                        <img src="images/1-1.jpg" class="img-responsive zoom-img" alt=""/>
-                        <div class="col-md1">
-                            <div class="col-md2">
-                                <div class="col-md3">
-                                    <span class="star"> </span>
-                                </div>
-                                <div class="col-md4">
-                                    <strong>逍遥品悟耕读缘</strong>
-
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-
-                            <a href=HotelfAction?action_flag=view&hoid=1 class="hvr-sweep-to-right more">详细</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 project-grid">
-                    <div class="project-grid-top">
-                        <img src="images/2-1.jpg" class="img-responsive zoom-img" alt=""/>
-                        <div class="col-md1">
-                            <div class="col-md2">
-                                <div class="col-md3">
-                                    <span class="star"> </span>
-                                </div>
-                                <div class="col-md4">
-                                    <strong>生态绿色永旋农庄</strong>
-
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-
-                            <a href="HotelfAction?action_flag=view&hoid=2" class="hvr-sweep-to-right more">详细</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 project-grid">
-                    <div class="project-grid-top"><img src="images/3-2.jpg" class="img-responsive zoom-img" alt=""/>
-                        <div class="col-md1">
-                            <div class="col-md2">
-                                <div class="col-md3">
-                                    <span class="star"> </span>
-                                </div>
-                                <div class="col-md4">
-                                    <strong>新叶古居农家</strong>
-
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-
-                            <a href="HotelfAction?action_flag=view&hoid=3" class="hvr-sweep-to-right more">详细</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3 project-grid">
-                    <div class="project-grid-top">
-                        <img src="images/4-1.jpg" class="img-responsive zoom-img" alt=""/>
-                        <div class="col-md1">
-                            <div class="col-md2">
-                                <div class="col-md3">
-                                    <span class="star"> </span>
-                                </div>
-                                <div class="col-md4">
-                                    <strong>新叶明香园</strong>
-                                    <small></small>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
-
-                            <a href="HotelfAction?action_flag=view&hoid=4" class="hvr-sweep-to-right more">详细</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>
-    </div>
     <!--//project-->
     <!--test--><!--//test-->
     <!--partners-->

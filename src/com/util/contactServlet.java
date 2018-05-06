@@ -1,28 +1,23 @@
 package com.util; 
-import java.io.IOException; 
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletException;
+import javax.servlet.ServletRequest;
+import javax.servlet.ServletResponse;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import java.io.IOException;
 
 //import javax.jms.Session;
-import javax.servlet.ServletConfig; 
-import javax.servlet.ServletException; 
-import javax.servlet.ServletRequest; 
-import javax.servlet.ServletResponse; 
-import javax.servlet.http.HttpServletRequest; 
-import javax.servlet.http.HttpServletResponse;
-import javax.sql.DataSource;
-
-import java.sql.*;
-
-import javax.sql.DataSource;
 
 public class contactServlet implements javax.servlet.Servlet{ 
 	 public void doPost(HttpServletRequest request,HttpServletResponse response)
 	 throws ServletException,IOException{
 		// response.sendRedirect("index.jsp");
 		 request.setCharacterEncoding("UTF-8");
-		 String lxmail = request.getParameter("lxmail");//取得密码
-		 String lxsub = request.getParameter("lxsub");//取得电话
+		 String lxmail = request.getParameter("lxmail");//取得邮箱
+		 String lxsub = request.getParameter("lxsub");//取得主题
 		 request.setCharacterEncoding("UTF-8");
-		 String lxnr = request.getParameter("lxnr");//取得邮箱
+		 String lxnr = request.getParameter("lxnr");//取得内容
 		 String a = (String)request.getSession().getAttribute("userName");
 		   DBUtil db = new DBUtil();
 		   String ifuser = db.ifuser(a,lxmail,lxsub,lxnr);

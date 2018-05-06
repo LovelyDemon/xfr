@@ -723,7 +723,7 @@ public class DBUtil {
     }
 
     public boolean addCompanion(String title, String startDate, String endDate, String location,
-                                Integer maleNum, Integer femaleNum, String phone, String detail) {
+                                Integer limitNum, String phone, String detail) {
         boolean response = false;
         Connection connection = null;
         Statement statement = null;
@@ -732,9 +732,9 @@ public class DBUtil {
             connection = getConnection();
             statement = connection.createStatement();
             int result = statement.executeUpdate(
-                    "INSERT INTO companion ( title, start_date, end_date, location, male_num, female_num, phone, detail )" +
+                    "INSERT INTO companion ( title, start_date, end_date, location, limit_num, phone, detail )" +
                             "VALUES ( '" + title + "', '" + startDate + "', '" + endDate + "', '" + location + "', "
-                            + maleNum + ", " + femaleNum + ", '" + phone + "', '" + detail + "' )");
+                            + limitNum + ", '" + phone + "', '" + detail + "' )");
             if (result == 1) {
                 response = true;
             }

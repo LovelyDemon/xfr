@@ -13,18 +13,18 @@
 	 <div class="contact-top">
 		<div class="col-md-6 contact-top1">
 		  <h4 > <b>尊敬的用户您好：</b></h4>
-          <p class="text-contact"> 本网站是旨在提供XX地区旅游信息服务的品台。若您有需要咨询的问题，或对我们的服务有更好的要求或建议，您可以通过以下几种方式联系我们。</p>
+          <p class="text-contact"> 有问题请联系我们哦！</p>
 		  <div class="contact-address">
 		  	<div class="col-md-6 contact-address1">
-			  	 <h5>XX地址</h5>
-	             <p><b>XX旅游咨询处</b></p>
-	             <p>XX省XX市</p>
-	             <p>具体地址</p>	
+			  	 <h5>地址</h5>
+	             <p><b>旅游咨询处</b></p>
+	             <p>广东省广州市</p>
+	             <p>仲恺农业工程学院</p>
 		  	</div>
 		  	<div class="col-md-6 contact-address1">
 			  	  <h5>联系邮箱 </h5>
-	             <p> <a href="malito:mail@demolink.org">1：XXX(at)163.com</a></p>
-	             <p>2：<a href="malito:mail@demolink.org"> XXX(at)163.com</a></p>
+	             <p> <a href="malito:mail@demolink.org">1：123456789@163.com</a></p>
+	             <p> <a href="malito:mail@demolink.org">2：222222222@163.com</a></p>
 		  	</div>
 		  	<div class="clearfix"></div>
 		  </div>
@@ -32,7 +32,7 @@
 		  	<div class="col-md-6 contact-address1">
 			  	 <h5 >联系电话： </h5>
 	             <p>固定电话 : 021-111-1111</p>
-	             <p>移动电话: +158 XXXX XXXX</p>
+	             <p>移动电话: +158 1111 1111</p>
 	        </div>
 		  	<div class="clearfix"></div>
 		  </div>

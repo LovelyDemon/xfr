@@ -1,26 +1,15 @@
 package com.change;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import com.util.DividePage;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.disk.DiskFileItemFactory;
-import org.apache.commons.fileupload.servlet.ServletFileUpload;
-
-
-
-import com.util.DividePage;
-import com.util.UUIDTools;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+import java.util.Map;
 
 public class ScenicfAction extends HttpServlet {
 
@@ -77,9 +66,7 @@ public class ScenicfAction extends HttpServlet {
 		String action_flag = request.getParameter("action_flag");
 		//if (action_flag.equals("add")) {
 		//	addProduct(request,response);
-		//}else  
-		System.out.print("dell!");
-		System.out.print(action_flag);
+		//}else
 		if (action_flag.equals("search")) {
 			listScenic(request,response);
 		}

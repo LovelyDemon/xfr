@@ -176,8 +176,6 @@
 
             <div class="box-sin">
                 <div class="buy-single">
-                    <div class="top-grid">
-                        <h3>酒店一览</h3></div>
                     <div class="box-sin">
                         <form class="form-horizontal" form name="form1" action="" method="post">
                             <ul class="career-start">

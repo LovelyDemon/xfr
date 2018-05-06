@@ -1,28 +1,15 @@
 package com.change;
 
-import java.io.File;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Map;
-import java.util.UUID;
+import com.util.DividePage;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
-import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.disk.DiskFileItemFactory;
-import org.apache.commons.fileupload.servlet.ServletFileUpload;
-
-
-
-
-
-import com.util.DividePage;
-import com.util.UUIDTools;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.List;
+import java.util.Map;
 
 public class UmsgAction extends HttpServlet {
 
@@ -251,16 +238,9 @@ public class UmsgAction extends HttpServlet {
 	
 	private void del_nepl(HttpServletRequest request,
 			HttpServletResponse response) {
-		// TODO Auto-generated method stub
-		
-		System.out.println("进入del");
 		//获得复选框的值
 		String[] ids = request.getParameterValues("ids");
-		for (int i = 0; i < ids.length; i++) {
-			System.out.println("ids["+i+"]="+ids[i]);
-		}
 		boolean flag = service.del_nepl(ids);
-		System.out.println("删除flag:"+flag);
 		if (flag) {
 			try {
 				String script = "<script> alert('删除成功!');location.href='umsg_nepl.jsp'</script>";
