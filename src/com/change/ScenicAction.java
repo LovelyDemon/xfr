@@ -1,26 +1,17 @@
 package com.change;
 
-import java.io.File;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.UUID;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import org.apache.commons.fileupload.FileItem;
-import org.apache.commons.fileupload.disk.DiskFileItemFactory;
-import org.apache.commons.fileupload.servlet.ServletFileUpload;
-
-
 
 import com.util.DividePage;
-import com.util.UUIDTools;
 
 public class ScenicAction extends HttpServlet {
 
@@ -148,7 +139,7 @@ public class ScenicAction extends HttpServlet {
 			scenicName = "";
 		}
 
-		int totalRecord = service.getItemCount(scenicName); //获取总的记录数
+		int totalRecord = service.getCount(scenicName); //获取总的记录数
 		int currentPage = 1;
 		DividePage dividePage = new DividePage(5, totalRecord);//默认第一页开始
 		if (pageNum != null) {

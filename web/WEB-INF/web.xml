@@ -124,6 +124,10 @@
         <servlet-name>CompanionAction</servlet-name>
         <url-pattern>/admin/CompanionAction</url-pattern>
     </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CompanionAction</servlet-name>
+        <url-pattern>/CompanionAction</url-pattern>
+    </servlet-mapping>
 
     <servlet>
         <servlet-name>OrderAction</servlet-name>

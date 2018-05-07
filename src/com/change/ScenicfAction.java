@@ -39,6 +39,7 @@ public class ScenicfAction extends HttpServlet {
 	 * @throws ServletException if an error occurred
 	 * @throws IOException if an error occurred
 	 */
+	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -55,6 +56,7 @@ public class ScenicfAction extends HttpServlet {
 	 * @throws ServletException if an error occurred
 	 * @throws IOException if an error occurred
 	 */
+	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 
@@ -95,18 +97,14 @@ public class ScenicfAction extends HttpServlet {
 	}
 
 
-	private void listScenic(HttpServletRequest request,
-			HttpServletResponse response) {
-		// TODO Auto-generated method stub
-		
+	private void listScenic(HttpServletRequest request, HttpServletResponse response) {
 		String scenicName = request.getParameter("scname");	
 		String pageNum = request.getParameter("pageNum");
-		System.out.println("参数 pageNum :"+pageNum);
 		if (scenicName == null) {
 			scenicName = "";
 		}
 
-		int totalRecord = service.getItemCount(scenicName); //获取总的记录数
+		int totalRecord = service.getCount(scenicName); //获取总的记录数
 		int currentPage = 1;
 		DividePage dividePage = new DividePage(20, totalRecord);//默认第一页开始
 		if (pageNum != null) {
@@ -143,6 +141,7 @@ public class ScenicfAction extends HttpServlet {
 	 *
 	 * @throws ServletException if an error occurs
 	 */
+	@Override
 	public void init() throws ServletException {
 		// Put your code here
 		service = new ScenicDao();

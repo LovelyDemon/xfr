@@ -20,7 +20,7 @@ String scenicName = (String) request.getAttribute("scenicName");
 if(list==null){
 	//第一次进news_ main.jsp页面，默认加载所有的新闻
 	ScenicService service = new ScenicDao();
-	int totalRecord = service.getItemCount("");
+	int totalRecord = service.getCount("");
 	dividePage = new DividePage(5,totalRecord,1);
 	int start = dividePage.fromIndex();
 	int end = dividePage.toIndex();

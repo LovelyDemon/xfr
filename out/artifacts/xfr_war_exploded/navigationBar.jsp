@@ -37,8 +37,7 @@
                     </a>
                 </div>
                 <div class=" bottom-head">
-
-                    <a href="admin/addCompanion.jsp">
+                    <a href="companion_list.jsp">
                         <div class="buy-media">
                             <i class="buy"> </i>
                             <h6>结伴同行</h6>
