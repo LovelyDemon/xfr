@@ -102,7 +102,6 @@ public class ScenicDao implements ScenicService {
 
     @Override
     public Map<String, Object> viewScenic(String scid) {
-        // TODO Auto-generated method stub
         Map<String, Object> map = null;
         try {
             jdbcUtils.getConnection();
@@ -112,14 +111,11 @@ public class ScenicDao implements ScenicService {
             map = jdbcUtils.findSimpleResult(sql, params);
 
         } catch (Exception e) {
-            // TODO: handle exception
             e.printStackTrace();
         } finally {
             // 关闭数据库连接
             jdbcUtils.releaseConn();
         }
-
-
         return map;
     }
 

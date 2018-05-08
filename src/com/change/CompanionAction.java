@@ -63,7 +63,7 @@ public class CompanionAction extends HttpServlet {
 		Map<String, Object> map = service.getDetail(id);
 		request.setAttribute("detailMap", map);
 		try {
-			request.getRequestDispatcher("/admin/pro_change.jsp").forward(request, response);
+			request.getRequestDispatcher("/admin/companion_detail.jsp").forward(request, response);
 		} catch (Exception e) {
 			e.printStackTrace();
 		} 

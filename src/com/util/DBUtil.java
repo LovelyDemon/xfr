@@ -23,7 +23,6 @@ public class DBUtil {
         //加载MYSQL JDBC驱动程序
         Class.forName("com.mysql.jdbc.Driver");
         bInited = true;
-        System.out.println("Success loading Mysql Driver!");
     }
 
     public Connection getConnection() throws ClassNotFoundException,
@@ -52,8 +51,6 @@ public class DBUtil {
             while (rs.next()) {
                 String userNameInDB = rs.getString("uname");
                 String passwordInDB = rs.getString("upass");
-                System.out.print(utypeInDB);
-                System.out.print("dbu");
                 if (userNameInDB.equals(userName) &&
                         passwordInDB.equals(password)) {
                     returnValue = true;
@@ -73,7 +70,6 @@ public class DBUtil {
 
 
     public boolean ifadmin(String userName) {   //判断用户身份
-        System.out.println(" ola!");
         boolean returnValue = false;
 
         Connection conne = null;
@@ -84,11 +80,8 @@ public class DBUtil {
             stmtt = conne.createStatement();
             rss = stmtt.executeQuery("SELECT * FROM user");
             while (rss.next()) {
-                System.out.println(" hi!");
                 String utypeInDB = rss.getString("utype");
                 String userNameInDB = rss.getString("uname");
-                System.out.print(userNameInDB);
-                System.out.print(userName);
                 if (userNameInDB.equals(userName) && utypeInDB.equals("admin")) {
 
                     returnValue = true;
@@ -125,8 +118,6 @@ public class DBUtil {
                 String utypeInDB = rss.getString("utype");
                 rid = rss.getInt("id");
                 String userNameInDB = rss.getString("uname");
-                System.out.print(userNameInDB);
-                System.out.print(userName);
                 if (userNameInDB.equals(userName) && utypeInDB.equals("user")) {
 
                     returnValue = false;
@@ -149,8 +140,6 @@ public class DBUtil {
 
 
     public boolean injianjie(jianjie a) {  //修改简介
-        System.out.println(" haha!");
-
         Connection conne = null;
         Statement stmtt = null;
         boolean b = false;
@@ -160,9 +149,6 @@ public class DBUtil {
         try {
             conne = getConnection();
             stmtt = conne.createStatement();
-            System.out.println(" heihei!");
-
-
             if (jieshao != "" && wenhua != "") {
                 b = true;
                 int result = stmtt.executeUpdate("UPDATE jianjie SET jieshao='" + jieshao + "',wenhua='" + wenhua + "' where jid='1'");
@@ -178,7 +164,6 @@ public class DBUtil {
 
 
     public void tiqujie(jianjie a) {  //提取介绍到增加简介
-        System.out.println(" ola!");
         Connection conne = null;
         Statement stmtt = null;
         ResultSet rss = null;
@@ -187,7 +172,6 @@ public class DBUtil {
             stmtt = conne.createStatement();
             rss = stmtt.executeQuery("SELECT * FROM jianjie");
             while (rss.next()) {
-                System.out.println(" hi!");
                 a.setJieshao(rss.getString("jieshao"));
                 a.setWenhua(rss.getString("wenhua"));
 
@@ -213,7 +197,6 @@ public class DBUtil {
             stmtt = conne.createStatement();
             rss = stmtt.executeQuery("SELECT * FROM news where neid='" + i + "'");
             while (rss.next()) {
-                System.out.println(" hi!");
                 a.setnesavetime(rss.getString("nesavetime"));
                 a.setnename(rss.getString("nename"));
                 a.setnename(rss.getString("nename"));
@@ -230,7 +213,6 @@ public class DBUtil {
     }
 
     public void tiqupro(pro_add a, String i) {  //提取新闻到主页
-        System.out.println(" ola!");
         Connection conne = null;
         Statement stmtt = null;
         ResultSet rss = null;
@@ -253,7 +235,6 @@ public class DBUtil {
     }
 
     public void tiquscenic(scenic_add a, String i) {  //提取新闻到主页
-        System.out.println(" ola!");
         Connection conne = null;
         Statement stmtt = null;
         ResultSet rss = null;
@@ -275,9 +256,6 @@ public class DBUtil {
     }
 
     public String adnews(news_add a) {  //添加新闻
-
-        System.out.println(" haha!");
-
         Connection conne = null;
         Statement stmtt = null;
         ResultSet rss = null;
@@ -287,18 +265,14 @@ public class DBUtil {
         String nezy = a.getnezy();
         String nenr = a.getnenr();
         String nepic = a.getnepic();
-        System.out.println(" lll!" + nename);
         int neid = 1;
         try {
             conne = getConnection();
             stmtt = conne.createStatement();
-            System.out.println(" heihei!");
             rss = stmtt.executeQuery("SELECT * FROM news");
             while (rss.next()) {
-                System.out.println(" hi!");
                 neid = rss.getInt("neid");
                 if (nename.equals(rss.getString("nename"))) {
-                    System.out.println("ok");
                     b = "c";
                     if (nename != null && neactor != null && nezy != null && nenr != null && nepic != null) {
                         Date now = new Date();
@@ -340,13 +314,9 @@ public class DBUtil {
         String cupass = a.getcupass();//取得密码
         String cuphone = a.getcuphone();
         String cumail = a.getcumail();
-        System.out.println(cupass);
         try {
             conne = getConnection();
             stmtt = conne.createStatement();
-            System.out.println(cuname);
-
-
             if (cuname != "" && cupass != "") {
                 int result = stmtt.executeUpdate("UPDATE user SET upass='" + cupass + "',uphone='" + cuphone + "',umail='" + cumail + "' where uname='" + cuname + "'");
                 b = true;
@@ -360,7 +330,6 @@ public class DBUtil {
     }
 
     public void tipersonal(personal a, String sename, String setype) {  //提取个人信息
-        System.out.println(" tiperson!");
         Connection conne = null;
         Statement stmtt = null;
         ResultSet rss = null;
@@ -368,17 +337,11 @@ public class DBUtil {
             conne = getConnection();
             stmtt = conne.createStatement();
             rss = stmtt.executeQuery("SELECT * FROM user where uname='" + sename + "' and utype='" + setype + "'");
-
-            System.out.println(" hi!");
             while (rss.next()) {
-                System.out.println(" hi!");
                 a.setcuname(rss.getString("uname"));
                 a.setcupass(rss.getString("upass"));
                 a.setcuphone(rss.getString("uphone"));
                 a.setcumail(rss.getString("umail"));
-                System.out.print(a.cuname);
-
-
             }
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
@@ -388,9 +351,6 @@ public class DBUtil {
     }
 
     public String adscenic(scenic_add a) {  //添加景点
-
-        System.out.println(" haha!");
-
         Connection conne = null;
         Statement stmtt = null;
         ResultSet rss = null;
@@ -409,13 +369,10 @@ public class DBUtil {
         try {
             conne = getConnection();
             stmtt = conne.createStatement();
-            System.out.println(" jieshao!");
             rss = stmtt.executeQuery("SELECT * FROM scenic");
             while (rss.next()) {
-                System.out.println(" WWWWW!");
                 scid = rss.getInt("scid");
                 if (scname.equals(rss.getString("scname"))) {
-                    System.out.println("ok");
                     b = "c";
                     if (scname != "" && sclocal != "" && scprice != "" && scjs != "" && sctj != "") {
 
@@ -459,16 +416,10 @@ public class DBUtil {
         try {
             conne = getConnection();
             stmtt = conne.createStatement();
-            System.out.println(" product!");
             rss = stmtt.executeQuery("SELECT * FROM product");
             while (rss.next()) {
                 prid = rss.getInt("prid");
-                System.out.println("start");
-                System.out.println(prname);
-                System.out.println(rss.getString("prname"));
-                System.out.println("reset");
                 if (prname.equals(rss.getString("prname"))) {
-                    System.out.println("ok");
                     b = "c";
                     if (prname != "" && prprice != "" && prjs != "" && prpic != "") {
 
@@ -499,8 +450,6 @@ public class DBUtil {
     }
 
     public String adrec(rec_add a) {  //添加推荐路线
-
-        System.out.println(" haha!");
         String b = null;
         Connection conne = null;
         Statement stmtt = null;
@@ -515,13 +464,11 @@ public class DBUtil {
         try {
             conne = getConnection();
             stmtt = conne.createStatement();
-            System.out.println(" recommend!");
             rss = stmtt.executeQuery("SELECT * FROM recommend");
             while (rss.next()) {
 
                 reid = rss.getInt("reid");
                 if (rename.equals(rss.getString("rename"))) {
-                    System.out.println("ok");
                     b = "c";
                     if (rename != "" && renr != "" && rezy != "" && reactor != "" && repic != "") {
                         Date now = new Date();
@@ -537,9 +484,6 @@ public class DBUtil {
                 }
             }
             ++reid;
-
-            System.out.println(" r0000rrr!");
-
             if (rename != "" && renr != "" && reactor != "" && repic != "") {
                 Date now = new Date();
                 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");//可以方便地修改日期格式
@@ -557,7 +501,6 @@ public class DBUtil {
 
 
     public String ifuser(String userName, String lxmail, String lxsub, String lxnr) {   //判断用户身份
-        System.out.println(" ola!");
         String returnValue = "a";
         int rid = 1;
         String utypeInDB = "";
@@ -574,28 +517,17 @@ public class DBUtil {
 
             rss2 = stmtt2.executeQuery("SELECT * FROM lxwm");
             while (rss2.next()) {
-                System.out.println(" hi!");
-
                 rid = rss2.getInt("lxid");
             }
             rss = stmtt.executeQuery("SELECT * FROM user");
             while (rss.next()) {
-                System.out.println(" hi!");
                 utypeInDB = rss.getString("utype");
                 userNameInDB = rss.getString("uname");
-
-                System.out.print(userNameInDB);
-                System.out.print(userName);
-
                 if (userNameInDB.equals(userName)) {
                     ++rid;
-                    System.out.print("!!!!!");
                     Date now = new Date();
                     SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");//可以方便地修改日期格式
-
-
                     String hehe = dateFormat.format(now);
-                    System.out.println(hehe);
                     rss2 = stmtt2.executeQuery("SELECT * FROM lxwm");
                     if (lxmail != "" && lxsub != "" && lxnr != "") {
 
@@ -633,30 +565,18 @@ public class DBUtil {
             conne = getConnection();
             stmtt = conne.createStatement();
             stmtt2 = conne.createStatement();
-            System.out.println(" adorder_getordid!");
             rss2 = stmtt2.executeQuery("SELECT * FROM hotelord");
             while (rss2.next()) {
-                System.out.println(" adorder_getordid!");
-
                 ordid = rss2.getInt("ordid");
             }
-            System.out.print(ordid);
             rss = stmtt.executeQuery("SELECT * FROM user");
             while (rss.next()) {
-                System.out.println(" hi!");
                 userNameInDB = rss.getString("uname");
-                System.out.print(userNameInDB);
-                System.out.print(orduname);
-
                 if (userNameInDB.equals(orduname)) {
                     ++ordid;
-                    System.out.print("!!!!!");
                     Date now = new Date();
                     SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");//可以方便地修改日期格式
-
-
                     String hehe = dateFormat.format(now);
-                    System.out.println(hehe);
                     rss2 = stmtt2.executeQuery("SELECT * FROM hotelord");
                     if (orduname != "" && ordphone != "" && orddate != "" && ordlong != "") {
 
@@ -695,7 +615,6 @@ public class DBUtil {
             stmtt = conne.createStatement();
             stmtt2 = conne.createStatement();
             stmtt3 = conne.createStatement();
-            System.out.println(" huifu!");
             rss = stmtt.executeQuery("SELECT * FROM huifu");
             while (rss.next()) {
                 huiid = rss.getInt("huiid");

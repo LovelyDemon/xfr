@@ -1,10 +1,8 @@
-<%@ page language="java" import="java.util.*" pageEncoding="UTF-8" %>
-<%@page import="com.change.ScenicfAction" %>
-<%@page import="com.change.ScenicDao" %>
-<%@page import="com.change.ScenicService" %>
+<%@ page language="java" import="com.util.DBUtil" pageEncoding="UTF-8" %>
 <%@page import="my.scenic_add" %>
 
-<%@page import="com.util.DBUtil" %>
+<%@page import="java.text.SimpleDateFormat" %>
+<%@ page import="java.util.Map" %>
 <jsp:include page="top.jsp"/>
 <body>
 
@@ -14,30 +12,28 @@
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
     Map<String, Object> map = (Map<String, Object>) request.getAttribute("scenicMap");
+    SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 %>
-<!---->
 
 <div class="container">
     <div class="future">
-        <h3>景点详情</h3>
+        <h3>结伴详情</h3>
         <div class="buy-single-single">
-
             <div class="col-md-9 single-box">
-
                 <div class=" buying-top">
                     <div class="flexslider">
                         <ul class="slides">
-                            <li data-thumb="<%=path%>/upload/<%=map.get("scpic1") %>">
-                                <img src="<%=path%>/upload/<%=map.get("scpic1") %>" style="height: 400px;"/>
+                            <li data-thumb="<%=path%>/upload/<%=map.get("img_url") %>">
+                                <img src="<%=path%>/upload/<%=map.get("img_url") %>" style="height: 400px;"/>
                             </li>
-                            <li data-thumb="<%=path%>/upload/<%=map.get("scpic2") %>">
-                                <img src="<%=path%>/upload/<%=map.get("scpic2") %>" style="height: 400px; "/>
+                            <li data-thumb="<%=path%>/upload/<%=map.get("img_url2") %>">
+                                <img src="<%=path%>/upload/<%=map.get("img_url2") %>" style="height: 400px; "/>
                             </li>
-                            <li data-thumb="<%=path%>/upload/<%=map.get("scpic3") %>">
-                                <img src="<%=path%>/upload/<%=map.get("scpic3") %>" style="height: 400px;  "/>
+                            <li data-thumb="<%=path%>/upload/<%=map.get("img_url3") %>">
+                                <img src="<%=path%>/upload/<%=map.get("img_url3") %>" style="height: 400px;  "/>
                             </li>
-                            <li data-thumb="<%=path%>/upload/<%=map.get("scpic4") %>">
-                                <img src="<%=path%>/upload/<%=map.get("scpic4") %>" style="height: 400px;"/>
+                            <li data-thumb="<%=path%>/upload/<%=map.get("img_url4") %>">
+                                <img src="<%=path%>/upload/<%=map.get("img_url4") %>" style="height: 400px;"/>
                             </li>
                         </ul>
                     </div>
@@ -46,7 +42,6 @@
                     <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen"/>
 
                     <script>
-                        // Can also be used with $(document).ready()
                         $(window).load(function () {
                             $('.flexslider').flexslider({
                                 animation: "slide",
@@ -57,14 +52,11 @@
                 </div>
                 <div class="buy-sin-single">
                     <div class="col-sm-5 middle-side immediate">
-                        <h4><%=map.get("scname") %>
-                        </h4>
-                        <h5>门票价格 : <%=map.get("scprice") %>
-                        </h5>
-                        <br>
-                        <h5>推荐理由 :</h5>
-
-                        <p><%=map.get("sctj") %>
+                        <h4><%=map.get("title") %></h4>
+                        <h5>日期 : <%=sdf.format(map.get("start_date"))%> —— <%=sdf.format(map.get("end_date"))%></h5>
+                        <h5>旅行地点 : <%=map.get("location") %></h5>
+                        <h5>限制人数 : <%=map.get("limit_num") %></h5>
+                        <h5>已报名人数 : <%=map.get("limit_num") %></h5>
                         </p>
                     </div>
                     <div class="col-sm-7 buy-sin">
@@ -155,7 +147,7 @@
                         </div>
                         <div class="box-text">
                             <p><%out.print(scname4); %></p>
-                            <a href="ScenicfAction?action_flag=view&scid=4" class="in-box">详细</a>
+                            <a href="ScenicfAction?action_flag=view&scid=4" class="in-box">查看</a>
                         </div>
                         <div class="clearfix"></div>
                     </div>

@@ -1,7 +1,7 @@
 <%@ page contentType="text/html;charset=UTF-8" language="java" import="com.change.CompanionService" pageEncoding="UTF-8" %>
-<%@page import="com.change.CompanionServiceImpl" %>
-<%@page import="com.util.DividePage" %>
-<%@page import="java.text.SimpleDateFormat" %>
+<%@ page import="com.change.CompanionServiceImpl" %>
+<%@ page import="com.util.DividePage" %>
+<%@ page import="java.text.SimpleDateFormat" %>
 <%@ page import="java.util.List" %>
 <%@ page import="java.util.Map" %>
 <jsp:include page="top.jsp"/>
@@ -12,7 +12,7 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
     //获取 session 中的 username;
     String username = (String) session.getAttribute("username");
-    //获取从 servlet ProductActiion 中 传递的参数(数据库查询的结果)
+    //获取从中 传递的参数(数据库查询的结果)
     List<Map<String, Object>> list = (List<Map<String, Object>>) request.getAttribute("getListByPage");
     // 获取 分页对象
     DividePage dividePage = (DividePage) request.getAttribute("dividePage");
@@ -97,7 +97,7 @@
 
         function view() {
             var th = document.form1;
-            th.action = "<%=path%>/ScenicfAction?action_flag=view&scid=" + getSelectedValue();
+            th.action = "<%=path%>/CompanionAction?action_flag=view&id=" + getSelectedValue();
             th.submit();
         }
     </script>
@@ -116,9 +116,6 @@
             <div class="form-group" style="height: 108px; text-align:center'">
                 <br><br><b>名称</b>
                 <input type="text" class="form-control1" name="title" value="<%= title!=null?title:"" %>"/>
-                <%
-                    System.out.println(title);
-                %>
                 <button type="button" class="hvr-sweep-to-right more" onclick="search()">查找</button>
             </div>
         </form>
@@ -140,7 +137,7 @@
                             <div class="deal-bottom">
                                 <div class="top-deal1">
                                     <h5>
-                                        <a href="ScenicfAction?action_flag=view&scid=<%=map.get("id") %>"><%=map.get("title") %>
+                                        <a href="CompanionAction?action_flag=view&id=<%=map.get("id") %>"><%=map.get("title") %>
                                         </a>
                                     </h5>
                                     <p><%=sdf.format(map.get("start_date"))%> —— <%=sdf.format(map.get("end_date"))%></p>
@@ -148,7 +145,7 @@
                                     <%i++; %>
                                 </div>
                                 <div class="top-deal2">
-                                    <a href="ScenicfAction?action_flag=view&scid=<%=map.get("id") %>"
+                                    <a href="CompanionAction?action_flag=view&id=<%=map.get("id") %>"
                                        class="hvr-sweep-to-right more">详细</a>
                                 </div>
                                 <div class="clearfix"></div>
