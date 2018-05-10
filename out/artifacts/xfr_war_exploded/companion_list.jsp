@@ -88,7 +88,6 @@
         function getSelectedValue() {
             var ids = document.getElementsByName("ids");
             for (var i = 0; i < ids.length; i++) {
-
                 if (ids[i].checked) {
                     return ids[i].value;
                 }
@@ -97,7 +96,7 @@
 
         function view() {
             var th = document.form1;
-            th.action = "<%=path%>/CompanionAction?action_flag=view&id=" + getSelectedValue();
+            th.action = "<%=path%>/CompanionAction?action_flag=front_view&id=" + getSelectedValue();
             th.submit();
         }
     </script>
@@ -131,13 +130,13 @@
 
                     <div class="col-md-3 top-deal-top">
                         <div class=" top-deal">
-                            <a href="CompanionAction?action_flag=view&id=<%=map.get("id") %>" class="mask">
+                            <a href="CompanionAction?action_flag=front_view&id=<%=map.get("id") %>" class="mask">
                                 <img src="<%=path%>/upload/<%=map.get("img_url") %>" class="img-responsive zoom-img" alt="" style="height: 200px; width: 300px; ">
                             </a>
                             <div class="deal-bottom">
                                 <div class="top-deal1">
                                     <h5>
-                                        <a href="CompanionAction?action_flag=view&id=<%=map.get("id") %>"><%=map.get("title") %>
+                                        <a href="CompanionAction?action_flag=front_view&id=<%=map.get("id") %>"><%=map.get("title") %>
                                         </a>
                                     </h5>
                                     <p><%=sdf.format(map.get("start_date"))%> —— <%=sdf.format(map.get("end_date"))%></p>
@@ -145,7 +144,7 @@
                                     <%i++; %>
                                 </div>
                                 <div class="top-deal2">
-                                    <a href="CompanionAction?action_flag=view&id=<%=map.get("id") %>"
+                                    <a href="CompanionAction?action_flag=front_view&id=<%=map.get("id") %>"
                                        class="hvr-sweep-to-right more">详细</a>
                                 </div>
                                 <div class="clearfix"></div>

@@ -11,7 +11,7 @@
 <%
     String path = request.getContextPath();
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
-    Map<String, Object> map = (Map<String, Object>) request.getAttribute("scenicMap");
+    Map<String, Object> map = (Map<String, Object>) request.getAttribute("detailMap");
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
 %>
 

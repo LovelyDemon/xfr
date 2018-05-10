@@ -45,6 +45,8 @@ public class CompanionAction extends HttpServlet {
 			frontSearch(request,response);
 		} else if ("delete".equals(actionFlag)) {
 			deleteBatch(request,response);
+		} else if ("front_view".equals(actionFlag)) {
+			getFrontDetail(request,response);
 		} else if ("view".equals(actionFlag)) {
 			getDetail(request,response);
 		} else if (actionFlag.equals("pl_search")) {
@@ -58,6 +60,18 @@ public class CompanionAction extends HttpServlet {
 		out.close();
 	}
 
+	private void getFrontDetail(HttpServletRequest request, HttpServletResponse response) {
+		String id = request.getParameter("id");
+		Map<String, Object> map = service.getDetail(id);
+		request.setAttribute("detailMap", map);
+		try {
+			request.getRequestDispatcher("/companion_detail.jsp").forward(request, response);
+		} catch (Exception e) {
+			e.printStackTrace();
+		} 
+		
+	}
+
 	private void getDetail(HttpServletRequest request, HttpServletResponse response) {
 		String id = request.getParameter("id");
 		Map<String, Object> map = service.getDetail(id);
@@ -66,8 +80,8 @@ public class CompanionAction extends HttpServlet {
 			request.getRequestDispatcher("/admin/companion_detail.jsp").forward(request, response);
 		} catch (Exception e) {
 			e.printStackTrace();
-		} 
-		
+		}
+
 	}
 	
 	private void viewpl_ht(HttpServletRequest request,
