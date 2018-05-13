@@ -35,7 +35,6 @@ public class JdbcUtils {
 	private Statement stmt;
 
 	public JdbcUtils() {
-		// TODO Auto-generated constructor stub
 		try {
 			Class.forName(DRIVER);   //调用相应的class（DRIVER）进行类初始化
 			System.out.println("注册驱动成功！！");
@@ -43,7 +42,6 @@ public class JdbcUtils {
 			// TODO Auto-generated catch block
 			System.out.println("注册驱动失败！！");
 		}
-
 	}
 
 	// 定义获得数据库的连接
@@ -51,9 +49,7 @@ public class JdbcUtils {
 
 		try {
 			connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/zhly","root","838943723");
-
 		} catch (Exception e) {
-			// TODO: handle exception
 			System.out.println("Connection exception !");
 		}
 
@@ -287,7 +283,6 @@ public class JdbcUtils {
 			try {
 				resultSet.close();
 			} catch (Exception e) {
-				// TODO: handle exception
 				e.printStackTrace();
 			}
 			
@@ -297,7 +292,6 @@ public class JdbcUtils {
 			try {
 				stmt.close();
 			} catch (Exception e) {
-				// TODO: handle exception
 				e.printStackTrace();
 			}
 		}
@@ -305,7 +299,6 @@ public class JdbcUtils {
 			try {
 				pstmt.close();
 			} catch (Exception e) {
-				// TODO: handle exception
 				e.printStackTrace();
 			}
 		}
@@ -313,7 +306,6 @@ public class JdbcUtils {
 			try {
 				connection.close();
 			} catch (Exception e) {
-				// TODO: handle exception
 				e.printStackTrace();
 			}
 		}

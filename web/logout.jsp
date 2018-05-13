@@ -13,9 +13,8 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
  <body> 
 
   <%
-
    session.invalidate(); // 注销 session 
-   response.setHeader("refresh", "2; URL = index.jsp");  // 定时跳转
+   response.setHeader("refresh", "2; URL = login.jsp");  // 定时跳转
   %>
 
  </body>

@@ -12,4 +12,12 @@ public interface UadminService {
 	public boolean delUadmin(String[] ids);
 	//查询单个产品
 	public Map<String, Object> viewUadmin(String id);
+
+	/**
+	 * 根据用户名查询用户ID
+	 *
+	 * @param userName 用户名
+	 * @return Integer 用户ID
+	 */
+	Integer getUserIdByName(String userName);
 }

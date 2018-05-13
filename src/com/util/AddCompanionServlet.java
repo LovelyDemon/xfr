@@ -25,12 +25,12 @@ public class AddCompanionServlet extends HttpServlet {
             limitNum = Integer.parseInt(limitNumStr);
         }
         String phone = request.getParameter("phone");
-        String detail = request.getParameter("getDetail");
+        String detail = request.getParameter("detail");
 
         DBUtil db = new DBUtil();
         boolean success = db.addCompanion(title, startDate, endDate, location, limitNum, phone, detail);
         if (success) {
-            String script = "<script> alert('添加成功');location.href='index.jsp'</script>";
+            String script = "<script> alert('添加成功');location.href='getCompanion.jsp'</script>";
             response.setContentType("text/html;charset=UTF-8");
             response.getWriter().println(script);
         } else {

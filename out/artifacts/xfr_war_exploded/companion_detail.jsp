@@ -3,6 +3,7 @@
 
 <%@page import="java.text.SimpleDateFormat" %>
 <%@ page import="java.util.Map" %>
+<%@ page import="com.change.CompanionAction" %>
 <jsp:include page="top.jsp"/>
 <body>
 
@@ -13,6 +14,8 @@
     String basePath = request.getScheme() + "://" + request.getServerName() + ":" + request.getServerPort() + path + "/";
     Map<String, Object> map = (Map<String, Object>) request.getAttribute("detailMap");
     SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+    CompanionAction companionAction = new CompanionAction();
+    Boolean signUp = companionAction.isSignUp(request, response);
 %>
 
 <div class="container">
@@ -57,23 +60,29 @@
                         <h5>旅行地点 : <%=map.get("location") %></h5>
                         <h5>限制人数 : <%=map.get("limit_num") %></h5>
                         <h5>已报名人数 : <%=map.get("limit_num") %></h5>
+                        <h5>联系方式 : <%=map.get("phone") %></h5>
+                        </p>
+                        <% if(signUp){ %>
+                            <button type="button" disabled="true" class="btn btn-primary">已报名</button>
+                        <% }else{ %>
+                            <a href="CompanionAction?action_flag=sign_up&id=<%=map.get("id") %>"
+                               class="hvr-sweep-to-right more">报名</a>
+                        <% } %>
                         </p>
                     </div>
                     <div class="col-sm-7 buy-sin">
-                        <h4>景点简介</h4>
-                        <p><%=map.get("scjs") %>
+                        <h4>旅行详情</h4>
+                        <p><%=map.get("detail") %>
                         </p>
                     </div>
                     <div class="clearfix"></div>
                 </div>
-
-
             </div>
 
 
             <div class="col-md-3">
                 <div class="single-box-right right-immediate">
-                    <h4><b>推荐景点</b></h4>
+                    <h4><b>已报名组队</b></h4>
                     <%
                         scenic_add s1 = new scenic_add();
                         scenic_add s2 = new scenic_add();
@@ -163,8 +172,8 @@
                         <div class="clearfix"></div>
                     </div>
                 </div>
-
             </div>
+
             <div class="clearfix"></div>
         </div>
     </div>

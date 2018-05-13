@@ -63,7 +63,6 @@ public class UadminDao implements UadminService {
             count = Integer.parseInt(map.get("totalCount").toString());
 
         } catch (Exception e) {
-            // TODO: handle exception
             e.printStackTrace();
         } finally {
             // 关闭数据库连接
@@ -86,7 +85,6 @@ public class UadminDao implements UadminService {
                 flag = jdbcUtils.deleteByBatch(sql);
             }
         } catch (Exception e) {
-            // TODO: handle exception
             e.printStackTrace();
         } finally {
             // 关闭数据库连接
@@ -97,7 +95,6 @@ public class UadminDao implements UadminService {
 
     @Override
     public Map<String, Object> viewUadmin(String uid) {
-        // TODO Auto-generated method stub
         Map<String, Object> map = null;
         try {
             jdbcUtils.getConnection();
@@ -107,13 +104,32 @@ public class UadminDao implements UadminService {
             map = jdbcUtils.findSimpleResult(sql, params);
 
         } catch (Exception e) {
-            // TODO: handle exception
             e.printStackTrace();
         } finally {
             // 关闭数据库连接
             jdbcUtils.releaseConn();
         }
         return map;
+    }
+
+    @Override
+    public Integer getUserIdByName(String userName) {
+        Integer userId = null;
+        Map<String, Object> map = null;
+        try {
+            jdbcUtils.getConnection();
+            List<Object> params = new ArrayList<Object>();
+            params.add(userName);
+            String sql = "select * from user where uname = ?";
+            map = jdbcUtils.findSimpleResult(sql, params);
+            userId = (Integer) map.get("id");
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            // 关闭数据库连接
+            jdbcUtils.releaseConn();
+        }
+        return userId;
     }
 
 

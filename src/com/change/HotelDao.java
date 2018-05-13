@@ -50,10 +50,8 @@ public class HotelDao implements HotelService {
 			String sql = "insert into hotel(hoid,honame,holocal,hojs,biaonum,biaojg,danum,dajg,hopic1,hopic2,hopic3,hopic4,ordernum) values(?,?,?,?,?,?,?,?,?,?,?,?,'0')";
 			flag = jdbcUtils.updateByPreparedStatement(sql, params);
 		} catch (Exception e) {
-			// TODO: handle exception
 			e.printStackTrace();
 		}finally{
-			
 			// 关闭数据库连接
 			jdbcUtils.releaseConn();
 			

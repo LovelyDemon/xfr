@@ -116,6 +116,7 @@
                 <br><br><b>名称</b>
                 <input type="text" class="form-control1" name="title" value="<%= title!=null?title:"" %>"/>
                 <button type="button" class="hvr-sweep-to-right more" onclick="search()">查找</button>
+                <a href="/companion_publish.jsp">发布队伍</a>
             </div>
         </form>
         <br>
@@ -207,9 +208,6 @@
     </div>
 </div>
 
-</div>
-</div>
-</div>
 <!--footer-->
 <jsp:include page="bottom.jsp"/>
 <!--//footer-->

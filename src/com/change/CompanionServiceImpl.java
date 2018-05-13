@@ -339,7 +339,6 @@ public class CompanionServiceImpl implements CompanionService {
 
 	@Override
 	public Map<String, Object> viewpl_ht(String prplid) {
-		// TODO Auto-generated method stub
 		Map<String, Object> map = null;
 		try {
 			jdbcUtils.getConnection();
@@ -359,7 +358,55 @@ public class CompanionServiceImpl implements CompanionService {
 		
 		return map;
 	}
-	
+
+	@Override
+	public Boolean signUp(Long companionId, Long userId) {
+		boolean flag = false;
+		try {
+			jdbcUtils.getConnection();
+			if (companionId != null && userId != null) {
+				jdbcUtils.getConnection();
+				List<Object> params = new ArrayList<Object>();
+				params.add(companionId);
+				params.add(userId);
+				String sql = "INSERT INTO user_companion(companion_id,user_id) VALUES(?,?)";
+				flag = jdbcUtils.updateByPreparedStatement(sql, params);
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally{
+			// 关闭数据库连接
+			jdbcUtils.releaseConn();
+		}
+		return flag;
+	}
+
+	@Override
+	public Boolean isSignUp(Long companionId, Long userId) {
+		boolean flag = false;
+		Map<String, Object> map = null;
+		try {
+			jdbcUtils.getConnection();
+			if (companionId != null && userId != null) {
+				jdbcUtils.getConnection();
+				List<Object> params = new ArrayList<Object>();
+				params.add(companionId);
+				params.add(userId);
+				String sql = "SELECT * FROM user_companion WHERE companion_id = ? AND user_id = ?";
+				map = jdbcUtils.findSimpleResult(sql, params);
+				if (map != null && !map.isEmpty()) {
+					flag = true;
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally{
+			// 关闭数据库连接
+			jdbcUtils.releaseConn();
+		}
+		return flag;
+	}
+
 	@Override
 	public Map<String, Object> viewpl(String prid) {
 		// TODO Auto-generated method stub

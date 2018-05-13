@@ -47,6 +47,25 @@ public interface CompanionService {
 	 * @return Map
 	 */
 	Map<String, Object> getDetail(String id);
+
 	Map<String, Object> viewpl(String prid);
 	Map<String, Object> viewpl_ht(String prid);
+
+	/**
+	 * 报名
+	 *
+	 * @param companionId 结伴ID
+	 * @param userId      用户ID
+	 * @return Boolean 是否保存成功
+	 */
+	Boolean signUp(Long companionId, Long userId);
+
+	/**
+	 * 是否报名
+	 *
+	 * @param companionId 结伴ID
+	 * @param userId      用户ID
+	 * @return Boolean 是否保存成功
+	 */
+	Boolean isSignUp(Long companionId, Long userId);
 }
